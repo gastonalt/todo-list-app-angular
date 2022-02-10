@@ -57,21 +57,21 @@ Algunas libertades:
 
 ## Aplicación
 
-El concepto es muy simple: Una lista de quehaceres (TO-DO) donde los items puedan ser de diferentes categorías.
+El concepto es muy simple: Una lista de quehaceres (TO-DO) donde los items puedan ser de diferentes *"categorías"* **arbitrarias** (que puedan ser definidas por el usuario).
 
-El dibujo que hice cuando se me ocurrió esto, con algunos detalles que imaginé en el momento es el siguiente:
+El dibujo que hice cuando se me ocurrió esto, con algunos detalles que imaginé en el momento, es el siguiente:
 
 ![Garabato Inicial](./garabato.jpg)
 
 Esto es un garabato de la primer idea que tuve. Es solo (**SOLO**) para que se entienda la idea.
 
-No deberían tener en cuenta esto para el diseño en absoluto, solo deberían entender el concepto.
+<span style="text-decoration: underline">No deberían tener en cuenta nada de la imagen para el diseño en absoluto, solo es para entender el concepto.</span>
 
 **Nótese** que yo estoy dele decir "aplicación" y el dibujo parece la pantalla de un celular. Esto **NO** significa que la aplicación tenga que ser una aplicación móvil. Puede ser cualquier tipo de aplicación, como aclaré más arriba.
 
 Como se puede ver, hay:
 - Items que pertenecen a categorías (serían como las "acciones" o "*actividades*")
-- Categorías que tienen items (un pequeño detalle es que los nombres de las categorías serían arbitrarios, no los colores)
+- Categorías que tienen items (un pequeño detalle es que los nombres de las categorías serían **arbitrarios**, no los colores)
 - Un listado:
   - **común** (pueden ir items de distintas categorías mezclados)
   - y **ordenado**. (el orden importa, no es arbitrario)
