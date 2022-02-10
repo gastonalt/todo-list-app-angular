@@ -22,7 +22,7 @@ A partir de cuando lean esto, ya pueden arrancar.
 
 Y así.
 
-<big>Importante:</big>
+**Importante:**
 
 > Si bien yo lo llamo aplicación, la realidad es que pueden hacer cualquier tipo de programa. Desde una aplicación de consola hasta un sitio web, pasando por un empaquetado para escritorio o un simple script. **Todo vale.**
 
@@ -66,18 +66,18 @@ Esto es un garabato de la primer idea que tuve. Es solo (**SOLO**) para que se e
 
 No deberían tener en cuenta esto para el diseño en absoluto, solo deberían entender el concepto.
 
-**Nótese** que yo estoy dele decir "apicación" y el dibujo parece la pantalla de un celular. Esto **NO** significa que la aplicación tenga que ser una aplicación móvil. Puede ser cualquier tipo de aplicación, como aclaré más arriba.
+**Nótese** que yo estoy dele decir "aplicación" y el dibujo parece la pantalla de un celular. Esto **NO** significa que la aplicación tenga que ser una aplicación móvil. Puede ser cualquier tipo de aplicación, como aclaré más arriba.
 
 Como se puede ver, hay:
 - Items que pertenecen a categorías (serían como las "acciones" o "*actividades*")
 - Categorías que tienen items (un pequeño detalle es que los nombres de las categorías serían arbitrarios, no los colores)
 - Un listado:
-  - **común** (pueden ir items de categorías mezclados)
+  - **común** (pueden ir items de distintas categorías mezclados)
   - y **ordenado**. (el orden importa, no es arbitrario)
 
 Eso es todo lo "obligatorio" que tiene que tener la aplicación. El resto, *a gusto y piacere*.
 
-<big>Happy coding!</big>
+***Happy coding!***
 
 ## FAQ
 
