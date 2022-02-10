@@ -47,6 +47,7 @@ Algunas pautas:
 - Obviamente el proyecto debe tener lo que dice la sección de [Aplicación](#aplicación).
 - **Fecha límite:** 17/02/2022 19:00hs
 - **NO** editar los archivos existentes ni hacer nada fuera de su carpeta. No les acepto las *PR*.
+- **NO** hacer ningún cambio a este repositorio. Ojalá pudiera directamente evitarlo pero en GitHub no es posible. Los cambios serán deshechos y serán eliminados como colaboradores.
 - Incluyan un *README* en sus proyectos explicándolo y preferentemente mostrándolo con imágenes. Sería bonito si lo ponen ganas.
 - Traten de **no** comunicarse entre uds., estaría bueno que las producciones sean *personales* y *originales*.
 
@@ -84,7 +85,7 @@ Eso es todo lo "obligatorio" que tiene que tener la aplicación. El resto, *a gu
 *Esta sección se irá llenando a medida que se presenten dudas comunes que tenga sentido responder y recolectar aquí.*
 
 ### ¿Va a haber algo así de vuelta más adelante?
-Quizás, pero [no cuentes con ello](https://c.tenor.com/FLV7sGtaM9oAAAAC/toy-story-woody.gif).
+Quizás, pero [no cuentes con ello](https://c.tenor.com/FLV7sGtaM9oAAAAC/toy-story-woody.gif). Y si llega a suceder, será en [GitLab](https://gitlab.com).
 
 ### Encontré un error en / Tengo una sugerencia para este *README*, ¿lo cambio?
 No. Me avisan y lo hago yo. E' mío.
