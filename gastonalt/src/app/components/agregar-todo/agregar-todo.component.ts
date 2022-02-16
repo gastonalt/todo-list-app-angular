@@ -20,58 +20,58 @@ export class AgregarTodoComponent implements OnInit {
     {
       id: 0,
       descripcion: 'La tarea 0',
-      categoria: {id: 1, descripcion: 'Cosas del hogar', borrada: false},
+      categoria: {id: 1, descripcion: 'Cosas del hogar', borrada: false, color: '#eee'},
       borrado: false,
-      check: false
+      check: false,
     },
     {
       id: 1,
       descripcion: 'Comprar leche',
-      categoria: {id: 1, descripcion: 'Cosas del hogar', borrada: false},
+      categoria: {id: 1, descripcion: 'Cosas del hogar', borrada: false, color: '#eee'},
       borrado: false,
-      check: false
+      check: false,
     },
     {
       id: 2,
       descripcion: 'Hacer gimnasia',
-      categoria: {id: 0, descripcion: 'Sin categoria', borrada: false},
+      categoria: {id: 0, descripcion: 'Sin categoria', borrada: false, color: '#eee'},
       borrado: false,
-      check: false
+      check: false,
     },
     {
       id: 3,
       descripcion: 'Visitar al cassius',
-      categoria: {id: 0, descripcion: 'Sin categoria', borrada: false},
+      categoria: {id: 0, descripcion: 'Sin categoria', borrada: false, color: '#eee'},
       borrado: false,
-      check: false
+      check: false,
     },
     {
       id: 4,
       descripcion: 'Programar en AMR',
-      categoria: {id: 2, descripcion: 'Programacion', borrada: false},
+      categoria: {id: 2, descripcion: 'Programacion', borrada: false, color: '#eee'},
       borrado: false,
-      check: false
+      check: false,
     },
     {
       id: 5,
       descripcion: 'Tirar unas liñitas ;) (...de codigo)',
-      categoria: {id: 2, descripcion: 'Programacion', borrada: false},
+      categoria: {id: 2, descripcion: 'Programacion', borrada: false, color: '#eee'},
       borrado: false,
-      check: false
+      check: false,
     },
     {
       id: 6,
       descripcion: 'Poner tildes a lo de arriba',
-      categoria: {id: 2, descripcion: 'Programacion', borrada: false},
+      categoria: {id: 2, descripcion: 'Programacion', borrada: false, color: '#eee'},
       borrado: false,
-      check: false
+      check: false,
     },
     {
       id: 7,
       descripcion: 'Visitar al osito',
-      categoria: {id: 1, descripcion: 'Cosas del hogar', borrada: false},
+      categoria: {id: 1, descripcion: 'Cosas del hogar', borrada: false, color: '#eee'},
       borrado: false,
-      check: false
+      check: false,
     },
   ]
 

@@ -4,6 +4,7 @@ import { Categoria } from '../../models/categoria';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { CrearCategoriaComponent } from '../crear-categoria/crear-categoria.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { EditarTodoComponent } from '../editar-todo/editar-todo.component';
 
 @Component({
   selector: 'app-lista',
@@ -12,6 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ListaComponent implements OnInit, OnChanges {
 
+  color: '#FFF';
   expandall=true;
   abierto = false;
   panelOpenState = false;
@@ -24,7 +26,7 @@ export class ListaComponent implements OnInit, OnChanges {
   numeroCategoriaSelected: number;
   selected = 'option2';
   public categorias : Categoria[] = [
-    {id: 0, descripcion: 'Sin categoria', borrada: false} /*,
+    {id: 0, descripcion: 'Sin categoria', borrada: false, color: '#FFFFFF'} /*,
     {id: -1, descripcion: 'Todas las categorias', borrada: false},
     {id: 1, descripcion: 'Cosas del hogar', borrada: false},
     {id: 2, descripcion: 'Programacion', borrada: false},
@@ -94,7 +96,7 @@ export class ListaComponent implements OnInit, OnChanges {
   }
 
   editarTodo(todo: Todo){
-    const dialogRef = this.dialog.open(CrearCategoriaComponent, {
+    const dialogRef = this.dialog.open(EditarTodoComponent, {
       width: '250px',
       data: {categoria: todo.descripcion},
     });
@@ -109,7 +111,7 @@ export class ListaComponent implements OnInit, OnChanges {
           'categoria': todo.categoria,
           'borrado': todo.borrado,
           'check': todo.check
-        } 
+        }
       }
     });
   }
@@ -117,43 +119,48 @@ export class ListaComponent implements OnInit, OnChanges {
   editar(categoria: Categoria){
     const dialogRef = this.dialog.open(CrearCategoriaComponent, {
       width: '250px',
-      data: {categoria: categoria.descripcion},
+      data: {categoria: categoria.descripcion, color: categoria.color},
     });
     dialogRef.afterClosed().subscribe(categoriaInput => {
+      console.log(categoriaInput)
       if(categoriaInput !== undefined && categoriaInput !== ''){
         this.categorias[categoria.id]={
           'id': categoria.id,
-          'descripcion': categoriaInput,
-          'borrada': false
+          'descripcion': categoriaInput.categoria,
+          'borrada': false,
+          'color':'#' + categoriaInput.color
         }
         this.arrayAMostrar.forEach(todo=>{
           if(todo.categoria.id === categoria.id){
             todo.categoria = {
               'id': categoria.id,
-              'descripcion': categoriaInput,
-              'borrada': false
+              'descripcion': categoriaInput.categoria,
+              'borrada': false,
+              'color':'#' +  categoriaInput.color
             }
           }
-        }) 
+        })
       }
     });
   }
-  
+
 
   agregarCategoria(){
       const dialogRef = this.dialog.open(CrearCategoriaComponent, {
         width: '250px',
-        data: {categoria: ''},
+        data: {categoria: '', color: ''},
       });
 
       dialogRef.afterClosed().subscribe(categoriaInput => {
-        // console.log(categoriaInput);
+        console.log(categoriaInput);
+        // console.log(categoriaInput)
         if(categoriaInput !== undefined && categoriaInput !== ''){
         this.categoria = categoriaInput;
           const categoriaObj = {
             'id' : this.categorias[this.categorias.length -1].id + 1,
-            'descripcion' : categoriaInput,
-            'borrada' : false
+            'descripcion' : categoriaInput.categoria,
+            'borrada' : false,
+            'color': '#' + categoriaInput.color
           }
           /*
           const categoria = new Categoria(this.categorias.length + 1, categoriaInput);

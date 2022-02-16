@@ -14,6 +14,7 @@
                 </mat-option>
                 <mat-option *ngFor="let categoria of categorias" value="{{categoria.id}}">
                     {{categoria.descripcion}}
+                    <i *ngIf="categoria.id != 0" class="fa-solid fa-circle fa-xl" [ngStyle]="{'color': categoria.color}" style="cursor: pointer; position: absolute; right: 3.6em; top:1em; scale: 300%;"></i>
                     <i *ngIf="categoria.id != 0" class="fa-solid fa-pencil fa-xl" style="cursor: pointer; color: #BBB; position: absolute; right: 2em; top:1em; scale: 300%;" matTooltip="Editar categoría" (click)="editar(categoria)"></i>
                     <i *ngIf="categoria.id != 0" style="cursor: pointer; color: #BBB; position: absolute; right: .4em; top:1em; scale: 300%;" class="fa-solid fa-trash fa-xl" matTooltip="Borrar categoría" (click)="borrarCategoria(categoria.id)"></i>
                     <!-- <mat-icon style="cursor: pointer; color: #BBB; position: absolute; right: 0px; top:.4em" mat-list-icon matSuffix matTooltip="Borrar categoría" (click)="borrarCategoria(categoria.id)">delete</mat-icon> -->
@@ -47,8 +48,9 @@
                     <mat-expansion-panel-header>
                         <mat-panel-title>
                             <mat-checkbox value="todo.check" [checked]="todo.check" (change)="changeTodo(todo)" [ngClass]="{ 'check-true': todo.check===true} "><span>{{todo.descripcion}}</span></mat-checkbox>
-                            <i class="fa-solid fa-pencil fa-xl" style="cursor: pointer; position: absolute; right: 2em; top:1em; scale: 300%;" matTooltip="Editar categoría" (click)="editarTodo(todo)"></i>
+                            <i class="fa-solid fa-pencil fa-xl" style="cursor: pointer; position: absolute; right: 2em; top:1em; scale: 300%;" matTooltip="Editar TODO" (click)="editarTodo(todo)"></i>
                             <mat-icon style="cursor: pointer; position: absolute; right: .5em; top:.5em" matSuffix (click)="borrar(todo)" matTooltip="Borrar item">remove_circle_outline</mat-icon>
+                            <i class="fa-solid fa-circle fa-xl" [ngStyle]="{'color': todo.categoria.color}" style="cursor: pointer; position: absolute; right: 3.6em; top:1em; scale: 300%;"></i>
                         </mat-panel-title>
                         <!--
                     <mat-panel-description>

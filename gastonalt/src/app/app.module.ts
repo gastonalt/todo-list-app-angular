@@ -24,6 +24,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 import { EditarTodoComponent } from './components/editar-todo/editar-todo.component';
+import { MAT_COLOR_FORMATS, NgxMatColorPickerModule, NGX_MAT_COLOR_FORMATS } from '@angular-material-components/color-picker';
 
 @NgModule({
   declarations: [
@@ -54,10 +55,12 @@ import { EditarTodoComponent } from './components/editar-todo/editar-todo.compon
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    NgxMatColorPickerModule
   ],
   providers: [
-    ListaComponent
+    ListaComponent,
+    { provide: MAT_COLOR_FORMATS, useValue: NGX_MAT_COLOR_FORMATS }
   ],
   bootstrap: [AppComponent]
 })
