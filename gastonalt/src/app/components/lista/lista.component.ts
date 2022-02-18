@@ -123,7 +123,7 @@ export class ListaComponent implements OnInit, OnChanges {
     });
     dialogRef.afterClosed().subscribe(categoriaInput => {
       console.log(categoriaInput)
-      if(categoriaInput !== undefined && categoriaInput !== ''){
+      if(categoriaInput.categoria !== undefined && categoriaInput.categoria !== ''){
         this.categorias[categoria.id]={
           'id': categoria.id,
           'descripcion': categoriaInput.categoria,
@@ -134,7 +134,7 @@ export class ListaComponent implements OnInit, OnChanges {
           if(todo.categoria.id === categoria.id){
             todo.categoria = {
               'id': categoria.id,
-              'descripcion': categoriaInput.categoria,
+              'descripcion': categoria.descripcion,
               'borrada': false,
               'color':'#' +  categoriaInput.color
             }
@@ -148,20 +148,21 @@ export class ListaComponent implements OnInit, OnChanges {
   agregarCategoria(){
       const dialogRef = this.dialog.open(CrearCategoriaComponent, {
         width: '250px',
-        data: {categoria: '', color: ''},
+        data: {categoria: '', color: '#FFF'},
       });
 
       dialogRef.afterClosed().subscribe(categoriaInput => {
         console.log(categoriaInput);
         // console.log(categoriaInput)
         if(categoriaInput !== undefined && categoriaInput !== ''){
-        this.categoria = categoriaInput;
-          const categoriaObj = {
-            'id' : this.categorias[this.categorias.length -1].id + 1,
-            'descripcion' : categoriaInput.categoria,
-            'borrada' : false,
-            'color': '#' + categoriaInput.color
-          }
+          let categoriaObj: Categoria;
+          this.categoria = categoriaInput;
+              categoriaObj = {
+                'id' : this.categorias[this.categorias.length -1].id + 1,
+                'descripcion' : categoriaInput.categoria || categoriaInput,
+                'borrada' : false,
+                'color': '#' + categoriaInput.color || '#FFF'
+              }
           /*
           const categoria = new Categoria(this.categorias.length + 1, categoriaInput);
           categoria.borrada = false;

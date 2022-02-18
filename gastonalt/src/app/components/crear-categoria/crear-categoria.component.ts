@@ -5,7 +5,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface DialogData {
   categoria: string,
-  color: any
+  color: any;
 }
 
 @Component({
@@ -29,7 +29,7 @@ export class CrearCategoriaComponent implements OnInit {
   @HostListener('window:keyup.Enter', ['$event'])
   onDialogClick(event: KeyboardEvent): void {
     if(this.data.categoria.length !== 0){
-      this.dialogRef.close({'categoria': this.data.categoria,'color': this.colorCtr.value?.hex});
+        this.dialogRef.close({'categoria': this.data.categoria,'color': this.colorCtr.value?.hex});
     }else{
       alert("Por favor, ingrese al menos un caractér");
     }

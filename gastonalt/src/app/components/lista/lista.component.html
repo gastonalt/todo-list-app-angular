@@ -67,6 +67,7 @@
                             <mat-select (selectionChange)="categoriaChange($event, todo)" [(value)]="changeCategoria">
                                 <mat-option *ngFor="let categoria of categorias" value="{{categoria.id}}">
                                     {{categoria.descripcion}}
+                                    <i class="fa-solid fa-circle fa-xl" [ngStyle]="{'color': todo.categoria.color}" style="cursor: pointer; position: absolute; right: 1em; top:1em; scale: 300%;"></i>
                                 </mat-option>
                             </mat-select>
                         </mat-form-field>
