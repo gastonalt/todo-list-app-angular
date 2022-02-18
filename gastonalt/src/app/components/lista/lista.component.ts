@@ -24,6 +24,7 @@ export class ListaComponent implements OnInit, OnChanges {
   categoriaSelected: string = 'a';
   changeCategoria: string;
   numeroCategoriaSelected: number;
+  colorAnterior= '#FFF';
   selected = 'option2';
   public categorias : Categoria[] = [
     {id: 0, descripcion: 'Sin categoria', borrada: false, color: '#FFFFFF'} /*,
@@ -154,15 +155,16 @@ export class ListaComponent implements OnInit, OnChanges {
       dialogRef.afterClosed().subscribe(categoriaInput => {
         console.log(categoriaInput);
         // console.log(categoriaInput)
-        if(categoriaInput !== undefined && categoriaInput !== ''){
+        if(categoriaInput !== undefined && categoriaInput !== '' && categoriaInput.categoria !== ''){
           let categoriaObj: Categoria;
           this.categoria = categoriaInput;
               categoriaObj = {
                 'id' : this.categorias[this.categorias.length -1].id + 1,
                 'descripcion' : categoriaInput.categoria || categoriaInput,
                 'borrada' : false,
-                'color': '#' + categoriaInput.color || '#FFF'
+                'color': '#' + categoriaInput.color || this.colorAnterior
               }
+              this.colorAnterior= '#' + categoriaInput.color || 'FFF';
           /*
           const categoria = new Categoria(this.categorias.length + 1, categoriaInput);
           categoria.borrada = false;
