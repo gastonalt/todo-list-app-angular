@@ -1,91 +1,58 @@
-# Reto Quehaceres Categorizados
-*Disclaimer: No está planeado que haya más que este reto.*
+# Aplicación de registro de tareas realizada en Ángular.
 
-## Introducción
+Esta apliación sirve para tomar nota de las tareas que debemos realizar en nuestro día, así como también para tener un trackeo de la completitud de las mismas.
 
-Me surgió una idea para una aplicación simple y pensé "¿Cómo la haría otra gente?", y cuando le comentaba a un amigo se me ocurrió que invitar a más gente para ver todas las diferencias podría ser algo **interesante**, **divertido** y quizás, **enriquecedor**.
+## ¿De donde surge la iniciativa para crear la aplicación?
 
-Eso es todo. Ese es el origen de esto.
+La iniciativa toma origen en un concurso que se realizaba de este tipo de aplicaciones, en una suerte de "competencia" donde desarrolladores compartían su visión sobre una app del estilo 
+**todolist app** y las herramientas que consideraba adecuadas para el desarrollo del mismo.
 
-## Dinámica
+## Contexto sobre mi conocimiento al momento de desarrollar esta aplicación.
 
-Vamos a la carne de esto.
+Al momento de desarrollar esta aplicación yo llevaba 8 meses de pasantía en mi primer trabajo como desarrollador, por lo que mis conocimientos no eran avanzados ni estaban a la altura de los que poseo hoy en día, por lo que era de mis primeras aplicaciones creadas y diseñadas íntegramente por mi.
 
-A partir de cuando lean esto, ya pueden arrancar.
+### ¿Por qué utilicé Angular para este desarrollo?
 
-[Más abajo](#aplicación) está toda la info que tienen que saber. Lo que no esté explícito o las dudas que les surjan las resuelven o les inventan soluciones uds. Si me preguntan algo les voy a decir:
+Utilicé Angular sencillamente porque era el framework que utilizaba en el trabajo y creo que tiene un potencial increible para el desarrollo de aplicaciones web. Ángular es una tecnología con la que me siento muy cómodo ya que la he utilizado a lo largo de mucho tiempo y conozco sus debilidades y fortalezas.
 
-- "Como quieras."
-- "No sé."
-- "Pensalo."
-- "Capaz."
+## Screenshots de la app
 
-Y así.
+![todo-list-angular](https://i.ibb.co/frvRMYP/todo-list-angular-01.png)![todo-list-angular](https://i.ibb.co/197HyfT/todo-list-angular-02.png)![todo-list-angular](https://i.ibb.co/ZVw1K6y/todo-list-angular-03.png)![todo-list-angular](https://i.ibb.co/X3KxYhD/todo-list-angular-04.png)
 
-**Importante:**
+## Características de la app
 
-> Si bien yo lo llamo aplicación, la realidad es que pueden hacer cualquier tipo de programa. Desde una aplicación de consola hasta un sitio web, pasando por un empaquetado para escritorio o un simple script. **Todo vale.**
+Esta app nos permite:
+- Crear tareas
+- Marcar tareas como "completas"
+- Marcar tareas como "incompletas"
+- Eliminar tareas
+- Crear categorías
+- Eliminar categorías
+- Modificar categorías
+- Asignar una categoría a una tarea.
+- Desasignar una categoría a una tarea.
 
-Antes de empezar a diseñar y programar deberían **fork**ear este proyecto y crear una nueva carpeta con su apodo, seudónimo o nombre. Ahí va a quedar su proyecto terminado.
+## Demo
 
-Si bien estaría copado que desarrollen el proyecto en Git para poder ver su evolución, pueden desarrollarlo aparte y meter la versión final en la carpeta, ala *drag and drop*. Como les sea más cómodo.
+Pueden probar una demo de la app desde aquí:
+[Enlace a la demo de la app "Lista de tareas en ángular"](https://todoappbygastonalt.netlify.app/) .
 
-Por ejemplo, mi fork se vería así:
-```
-📦reto-quehaceres-categorizados
- ┣ 📂c3r38r170
- ┃ ┗ 📜README.md
- ┣ 📜garabato.jpg
- ┗ 📜README.md
-```
+## Actualizaciones
 
-Con los archivos de mi aplicación también en *mi* carpeta, claro.
+No creo que este proyecto tenga o requiera de actualizaciones ya que estaba pensado para el concurso que mencioné en la [Introducción](#Aplicaci%C3%B3n-de-registro-de-tareas-realizada-en-%C3%81ngular.).
 
-Una vez subido el proyecto terminado, hacen una *pull request*, y si quieren, me avisan. Yo el último día voy a aceptar todas las *pull request* así que tienen hasta entonces para editarlo, cambiarlo, lo que quieran.
+## Bugs
 
-Algunas pautas:
-- Obviamente el proyecto debe tener lo que dice la sección de [Aplicación](#aplicación).
-- **Fecha límite:** 17/02/2022 19:00hs
-- **NO** editar los archivos existentes ni hacer nada fuera de su carpeta. No les acepto las *PR*.
-- **NO** hacer ningún cambio a este repositorio. Ojalá pudiera directamente evitarlo pero en GitHub no es posible. Los cambios serán deshechos y serán eliminados como colaboradores.
-- Incluyan un *README* en sus proyectos explicándolo y preferentemente mostrándolo con imágenes. Sería bonito si lo ponen ganas.
-- Traten de **no** comunicarse entre uds., estaría bueno que las producciones sean *personales* y *originales*.
+Hay un bug con el tamaño de los íconos. Esto se debe a una propiedad en algún archivo .css que establece la siguiente regla:
 
-Algunas libertades:
-- Puede/n usar la/s tecnología/s que quiera/n.
-- Pueden agregar más cosas si les parece que entran en el alcance de la aplicación.
+> < i _ngcontent-sci-c80="" mattooltip="Editar TODO"
+> class="mat-tooltip-trigger fa-solid fa-pencil fa-xl" style="cursor:
+> pointer; position: absolute; right: 2em; top: 1em; **scale: 300%**;"
+> aria-describedby="cdk-describedby-message-10"
+> cdk-describedby-host="0"></ i>
 
-## Aplicación
+A la espera de una solución.
 
-El concepto es muy simple: Una lista de quehaceres (TO-DO) donde los items puedan ser de diferentes *"categorías"* **arbitrarias** (que puedan ser definidas por el usuario).
+## Conclusiones
 
-El dibujo que hice cuando se me ocurrió esto, con algunos detalles que imaginé en el momento, es el siguiente:
-
-![Garabato Inicial](./garabato.jpg)
-
-Esto es un garabato de la primer idea que tuve. Es solo (**SOLO**) para que se entienda la idea.
-
-<span style="text-decoration: underline">No deberían tener en cuenta nada de la imagen para el diseño en absoluto, solo es para entender el concepto.</span>
-
-**Nótese** que yo estoy dele decir "aplicación" y el dibujo parece la pantalla de un celular. Esto **NO** significa que la aplicación tenga que ser una aplicación móvil. Puede ser cualquier tipo de aplicación, como aclaré más arriba.
-
-Como se puede ver, hay:
-- Items que pertenecen a categorías (serían como las "acciones" o "*actividades*")
-- Categorías que tienen items (un pequeño detalle es que los nombres de las categorías serían **arbitrarios**, no los colores)
-- Un listado:
-  - **común** (pueden ir items de distintas categorías mezclados)
-  - y **ordenado**. (el orden importa, no es arbitrario)
-
-Eso es todo lo "obligatorio" que tiene que tener la aplicación. El resto, *a gusto y piacere*.
-
-***Happy coding!***
-
-## FAQ
-
-*Esta sección se irá llenando a medida que se presenten dudas comunes que tenga sentido responder y recolectar aquí.*
-
-### ¿Va a haber algo así de vuelta más adelante?
-Quizás, pero [no cuentes con ello](https://c.tenor.com/FLV7sGtaM9oAAAAC/toy-story-woody.gif). Y si llega a suceder, será en [GitLab](https://gitlab.com).
-
-### Encontré un error en / Tengo una sugerencia para este *README*, ¿lo cambio?
-No. Me avisan y lo hago yo. E' mío.
+El desarrollo de esta app estuvo pensado para entrenar mis habilidades y permitirme aprender mas sobre las tecnologías que utilicé. Cualquier consejo y retroalimentación sobre la misma será coordialmente recibida.
